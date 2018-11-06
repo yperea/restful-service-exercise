@@ -13,7 +13,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity(name = "Role")
-@Table(name = "Roles")
+@Table(name = "roles")
 @RequiredArgsConstructor
 @NoArgsConstructor
 @Data
