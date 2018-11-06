@@ -1,0 +1,24 @@
+DELETE FROM users_roles;
+DELETE FROM users;
+ALTER TABLE users AUTO_INCREMENT = 1;
+DELETE FROM roles;
+ALTER TABLE roles AUTO_INCREMENT = 1;
+INSERT INTO users (id, first_name, last_name, user_name, password, api_key, created) VALUES (DEFAULT, 'Joe', 'Coyne', 'jcoyne', 'supersecret1', 'supersecret1', DEFAULT);
+INSERT INTO users (id, first_name, last_name, user_name, password, api_key, created) VALUES (DEFAULT, 'Fred', 'Hensen', 'fhensen', 'supersecret2', 'supersecret2', DEFAULT);
+INSERT INTO users (id, first_name, last_name, user_name, password, api_key, created) VALUES (DEFAULT, 'John', 'Smith', 'jsmith', 'supersecret3', 'supersecret3', DEFAULT);
+INSERT INTO users (id, first_name, last_name, user_name, password, api_key, created) VALUES (DEFAULT, 'Karen', 'Mack', 'kmack', 'supersecret4', 'supersecret4', DEFAULT);
+INSERT INTO users (id, first_name, last_name, user_name, password, api_key, created) VALUES (DEFAULT, 'Dianne', 'Klein', 'dklein', 'supersecret5', 'supersecret5', DEFAULT);
+INSERT INTO users (id, first_name, last_name, user_name, password, api_key, created) VALUES (DEFAULT, 'Dawn', 'Tillman', 'dtillman', 'supersecret6', 'supersecret6', DEFAULT);
+INSERT INTO users (id, first_name, last_name, user_name, password, api_key, created) VALUES (DEFAULT, 'Fred', 'Flintstone', 'fflintstone', 'supersecret7', 'supersecret7', DEFAULT);
+INSERT INTO roles (id, role_name, created) VALUES (DEFAULT, 'administrator', DEFAULT);
+INSERT INTO roles (id, role_name, created) VALUES (DEFAULT, 'user', DEFAULT);
+INSERT INTO users_roles (user_id, role_id) VALUES (1, 1);
+INSERT INTO users_roles (user_id, role_id) VALUES (2, 1);
+INSERT INTO users_roles (user_id, role_id) VALUES (3, 2);
+INSERT INTO users_roles (user_id, role_id) VALUES (4, 2);
+INSERT INTO users_roles (user_id, role_id) VALUES (5, 2);
+INSERT INTO users_roles (user_id, role_id) VALUES (6, 2);
+INSERT INTO users_roles (user_id, role_id) VALUES (7, 2);
+
+SELECT * FROM users;
+SELECT * FROM users_roles WHERE user_id = 8;
